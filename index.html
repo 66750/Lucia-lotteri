@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <title>Lucia-lotteri</title>
+  <style>
+    body {
+      background: #0b1a2b;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    h1 {
+      color: gold;
+      font-size: 3em;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 1.2em;
+      background: gold;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: orange;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lucia-lotteri</h1>
+  <p>Klicka på knappen för att dra en lott!</p>
+
+  <button onclick="drawLottery()">Dra lott </button>
+
+  <div id="result"></div>
+
+  <script>
+    const namn = [
+      "Bert",
+      "Nizze",
+      "Alexander",
+      "Vincent",
+      "Tobias",
+      "Kurt"
+    ];
+
+    function drawLottery() {
+      const randomIndex = Math.floor(Math.random() * prizes.length);
+      const result = prizes[randomIndex];
+
+      document.getElementById("result").innerText = "Du fick: " + result;
+    }
+  </script>
+
+</body>
+</html>
